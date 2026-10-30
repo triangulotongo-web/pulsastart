@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulsa Start · Videojuegos, juegos gratis y cosas random</title>
+<meta name="description" content="Juegos indie, cosas gratis, guías y movidas random. Todo en español, con buen rollo y sin política.">
+<meta name="theme-color" content="#16121f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23ff3d81'/><path d='M24 18 48 32 24 46Z' fill='white'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Caveat:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fff8ec;
+  --bg-2: #ffeccc;
+  --card: #ffffff;
+  --ink: #1b1530;
+  --muted: #5e5676;
+  --line: #1b1530;
+  --pink: #ff3d81;
+  --lime: #b6ff3d;
+  --cyan: #3de0ff;
+  --yellow: #ffd23d;
+  --purple: #9b7bff;
+  --shadow: 5px 5px 0 var(--line);
+  --shadow-sm: 3px 3px 0 var(--line);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16121f; --bg-2: #1f1930; --card: #241d38; --ink: #f6f1ff; --muted: #b8afd4; --line: #000000;
+    --shadow: 5px 5px 0 #000; --shadow-sm: 3px 3px 0 #000;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #16121f; --bg-2: #1f1930; --card: #241d38; --ink: #f6f1ff; --muted: #b8afd4; --line: #000000;
+  --shadow: 5px 5px 0 #000; --shadow-sm: 3px 3px 0 #000;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden;
+  background-image: radial-gradient(color-mix(in srgb, var(--ink) 9%, transparent) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: "Bricolage Grotesque", Inter, sans-serif; line-height: 1.08; letter-spacing: -.02em; font-weight: 800; }
+.wrap { width: min(1200px, 100% - 32px); margin-inline: auto; }
+.hand { font-family: Caveat, cursive; font-weight: 700; }
+
+.demo-bar { background: var(--ink); color: var(--bg); text-align: center; font-size: .8rem; font-weight: 600; padding: 6px 16px; }
+
+/* Cabecera */
+header { padding: 22px 0 10px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 12px; transform: rotate(-2deg); }
+.logo-mark {
+  width: 50px; height: 50px; border-radius: 14px; background: var(--pink); display: grid; place-items: center;
+  border: 3px solid var(--line); box-shadow: var(--shadow-sm);
+}
+.logo-mark svg { width: 20px; height: 20px; fill: #fff; margin-left: 4px; }
+.logo-text { font-family: "Bricolage Grotesque"; font-weight: 800; font-size: 2rem; letter-spacing: -.04em; line-height: 1; }
+.logo-text span { color: var(--pink); }
+.logo small { display: block; font-family: Caveat; font-size: 1.2rem; color: var(--muted); letter-spacing: 0; margin-top: 2px; }
+.search {
+  flex: 0 1 300px; display: flex; align-items: center; gap: 8px; padding: 11px 16px; border-radius: 999px;
+  background: var(--card); border: 3px solid var(--line); box-shadow: var(--shadow-sm); color: var(--muted); font-size: .9rem; font-weight: 500;
+}
+.search svg { width: 18px; height: 18px; flex: none; }
+
+.nav { display: flex; gap: 10px; overflow-x: auto; padding: 18px 4px 14px; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  white-space: nowrap; font-size: .9rem; font-weight: 700; padding: 8px 16px; border-radius: 999px;
+  border: 2.5px solid var(--line); background: var(--card); box-shadow: var(--shadow-sm); transition: transform .12s, box-shadow .12s;
+}
+.nav a:hover { transform: translate(-1px, -2px); box-shadow: 4px 5px 0 var(--line); }
+.nav a.on { background: var(--yellow); color: #1b1530; }
+
+/* Cinta de juegos gratis */
+.ticker { background: var(--lime); color: #142000; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: .92rem; border-block: 3px solid var(--line); transform: rotate(-1deg); margin: 10px -20px 0; }
+.ticker-track { display: inline-flex; gap: 40px; padding: 10px 0; animation: scroll 34s linear infinite; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+
+/* Pegatinas de categoría */
+.tag {
+  display: inline-block; font-size: .74rem; font-weight: 800; padding: 3px 10px; border-radius: 999px;
+  border: 2px solid var(--line); color: #1b1530; transform: rotate(-3deg);
+}
+.t-indie { background: var(--pink); color: #fff; }
+.t-gratis { background: var(--lime); }
+.t-guia { background: var(--cyan); }
+.t-random { background: var(--yellow); }
+.t-terror { background: var(--purple); color: #fff; }
+.meta { color: var(--muted); font-size: .82rem; font-weight: 500; }
+
+.thumb { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 16 / 10; display: grid; place-items: center; border: 3px solid var(--line); }
+.thumb .emoji { font-size: clamp(2.8rem, 6vw, 4.6rem); filter: drop-shadow(3px 4px 0 rgba(0,0,0,.35)); transition: transform .25s; }
+.b1 { background: #ffd23d; } .b2 { background: #ff3d81; } .b3 { background: #3de0ff; } .b4 { background: #b6ff3d; }
+.b5 { background: #9b7bff; } .b6 { background: #ff8a3d; } .b7 { background: #ffffff; }
+.dots::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(0,0,0,.14) 1.4px, transparent 1.4px); background-size: 12px 12px; }
+
+/* Tarjetas */
+.card {
+  display: block; background: var(--card); border: 3px solid var(--line); border-radius: 18px; padding: 14px;
+  box-shadow: var(--shadow); transition: transform .15s, box-shadow .15s;
+}
+.card:hover { transform: translate(-2px, -3px) rotate(-.4deg); box-shadow: 8px 9px 0 var(--line); }
+.card:hover .emoji { transform: scale(1.12) rotate(-6deg); }
+.card h3 { font-size: 1.25rem; margin: 10px 2px 6px; }
+.card p { color: var(--muted); font-size: .93rem; margin: 0 2px 8px; }
+.card .meta { margin-left: 2px; }
+
+main { padding: 34px 0 70px; }
+
+/* Destacado */
+.lead { display: grid; grid-template-columns: 1.5fr 1fr; gap: 28px; margin-bottom: 56px; }
+.hero { padding: 18px; background: var(--yellow); color: #1b1530; position: relative; }
+.hero .thumb { aspect-ratio: 16 / 8; background: #1b1530; }
+.hero .thumb .emoji { font-size: clamp(4rem, 9vw, 7rem); }
+.hero h1 { font-size: clamp(1.7rem, 3.6vw, 2.7rem); margin: 14px 2px 10px; }
+.hero p { color: #3c3355; font-size: 1.02rem; margin: 0 2px 10px; max-width: 640px; }
+.hero .meta { color: #4d4566; }
+.sticker {
+  position: absolute; top: -18px; right: 22px; z-index: 2; background: var(--pink); color: #fff; border: 3px solid #1b1530;
+  border-radius: 999px; padding: 8px 18px; font-family: Caveat; font-size: 1.5rem; line-height: 1; transform: rotate(6deg);
+  box-shadow: 3px 3px 0 #1b1530;
+}
+.vhs { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 2px, transparent 2px 4px), radial-gradient(circle at 50% 60%, #c9b960, #5c5226 60%, #1b1530); }
+.rec { position: absolute; top: 14px; left: 16px; color: #fff; font: 700 .9rem "Courier New", monospace; display: flex; gap: 8px; align-items: center; }
+.rec::before { content: ""; width: 11px; height: 11px; border-radius: 50%; background: #ff3030; animation: blink 1.2s steps(2) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.side { display: grid; gap: 20px; align-content: start; }
+.mini { display: grid; grid-template-columns: 108px 1fr; gap: 14px; align-items: center; padding: 12px; }
+.mini .thumb { aspect-ratio: 1; border-radius: 12px; }
+.mini .thumb .emoji { font-size: 2.4rem; }
+.mini h3 { font-size: 1.02rem; margin: 6px 0 2px; }
+
+/* Títulos de sección con garabato */
+.section-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; margin-bottom: 24px; }
+.section-title h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); position: relative; }
+.section-title h2::after {
+  content: ""; position: absolute; left: -4px; right: -6px; bottom: 2px; height: 12px; z-index: -1;
+  background: var(--pink); opacity: .45; border-radius: 6px; transform: rotate(-1.5deg);
+}
+.section-title .hand { font-size: 1.45rem; color: var(--muted); }
+.section-title a { margin-left: auto; font-weight: 700; font-size: .9rem; border-bottom: 2.5px solid var(--pink); }
+
+.layout { display: grid; grid-template-columns: 1fr 330px; gap: 40px; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; margin-bottom: 60px; }
+.grid .card:nth-child(odd) { transform: rotate(-.6deg); }
+.grid .card:nth-child(even) { transform: rotate(.6deg); }
+.grid .card:hover { transform: translate(-2px, -3px) rotate(0); }
+
+/* Barra lateral */
+aside { display: grid; gap: 26px; align-content: start; }
+.box { background: var(--card); border: 3px solid var(--line); border-radius: 18px; padding: 20px; box-shadow: var(--shadow); }
+.box h3 { font-size: 1.3rem; margin-bottom: 4px; }
+.box .hand { font-size: 1.2rem; color: var(--muted); display: block; margin-bottom: 12px; }
+.free { list-style: none; display: grid; gap: 12px; }
+.free li { display: flex; justify-content: space-between; gap: 12px; align-items: center; font-weight: 600; font-size: .94rem; padding-bottom: 12px; border-bottom: 2px dashed color-mix(in srgb, var(--ink) 20%, transparent); }
+.free li:last-child { border-bottom: 0; padding-bottom: 0; }
+.free small { display: block; color: var(--muted); font-size: .78rem; font-weight: 500; }
+.free b { font-size: .74rem; font-weight: 800; color: #142000; background: var(--lime); padding: 4px 9px; border-radius: 999px; border: 2px solid var(--line); white-space: nowrap; transform: rotate(3deg); }
+.ad {
+  border: 3px dashed color-mix(in srgb, var(--ink) 40%, transparent); border-radius: 18px; min-height: 250px; display: grid; place-items: center;
+  text-align: center; color: var(--muted); padding: 20px; font-weight: 600;
+}
+.ad .hand { font-size: 1.4rem; display: block; }
+.top5 { list-style: none; display: grid; gap: 12px; }
+.top5 li { display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: center; font-weight: 600; font-size: .93rem; }
+.top5 li span {
+  width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; font-family: "Bricolage Grotesque"; font-weight: 800;
+  border: 2.5px solid var(--line); background: var(--yellow); color: #1b1530;
+}
+.top5 li:nth-child(2) span { background: var(--cyan); }
+.top5 li:nth-child(3) span { background: var(--pink); color: #fff; }
+.top5 li:nth-child(4) span { background: var(--lime); }
+.top5 li:nth-child(5) span { background: var(--purple); color: #fff; }
+.promo { background: var(--purple); color: #fff; transform: rotate(1deg); }
+.promo .hand { color: #efe9ff; }
+.promo p { font-size: .92rem; margin-bottom: 14px; color: #f4f0ff; }
+.btn {
+  display: inline-flex; justify-content: center; width: 100%; padding: 11px 16px; border-radius: 12px; font-weight: 800;
+  background: var(--yellow); color: #1b1530; border: 3px solid #1b1530; box-shadow: 3px 3px 0 #1b1530;
+}
+.btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 #1b1530; }
+
+/* Al azar */
+.random { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.random .card { padding: 20px; }
+.random .card:nth-child(1) { background: var(--cyan); color: #1b1530; transform: rotate(-1.2deg); }
+.random .card:nth-child(2) { background: var(--lime); color: #1b1530; transform: rotate(.8deg); }
+.random .card:nth-child(3) { background: var(--pink); color: #fff; transform: rotate(-.6deg); }
+.random .card .meta { color: inherit; opacity: .75; }
+.random .tag { background: #fff; color: #1b1530; }
+.big-emoji { font-size: 2.6rem; display: block; margin-bottom: 6px; }
+
+/* Boletín */
+.newsletter {
+  margin-top: 64px; background: var(--ink); color: var(--bg); border-radius: 24px; border: 3px solid var(--line); box-shadow: var(--shadow);
+  padding: clamp(26px, 5vw, 44px); display: grid; grid-template-columns: 1.2fr 1fr; gap: 26px; align-items: center;
+}
+.newsletter h2 { font-size: clamp(1.6rem, 3.6vw, 2.4rem); }
+.newsletter h2 span { color: var(--yellow); }
+.newsletter p { opacity: .8; margin-top: 8px; }
+.form { display: flex; gap: 10px; flex-wrap: wrap; }
+.input { flex: 1 1 200px; padding: 13px 16px; border-radius: 12px; border: 3px solid var(--line); background: var(--card); color: var(--muted); font-weight: 500; }
+.form .btn { width: auto; padding: 12px 22px; }
+
+footer { padding: 36px 0 44px; font-size: .9rem; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; align-items: center; }
+footer nav { display: flex; flex-wrap: wrap; gap: 18px; font-weight: 600; color: var(--muted); }
+footer a:hover { color: var(--pink); }
+footer .hand { font-size: 1.35rem; }
+
+@media (prefers-reduced-motion: reduce) { .ticker-track, .rec::before { animation: none; } }
+@media (max-width: 980px) {
+  .lead, .layout, .newsletter { grid-template-columns: 1fr; }
+  .random { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .search { flex: 1 1 100%; }
+  .grid, .random { grid-template-columns: 1fr; }
+  .logo-text { font-size: 1.6rem; }
+  .mini { grid-template-columns: 84px 1fr; }
+  .sticker { font-size: 1.2rem; right: 12px; }
+  .ticker { margin-inline: -8px; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">Diseño de prueba: los artículos son de ejemplo 👀</div>
+
+<header>
+  <div class="wrap top">
+    <a href="#" class="logo" aria-label="Pulsa Start, portada">
+      <span class="logo-mark"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1 15 8 2 15Z"/></svg></span>
+      <span class="logo-text">pulsa<span>start</span><small>videojuegos y cosas random</small></span>
+    </a>
+    <div class="search" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      ¿Qué buscas, crack?
+    </div>
+  </div>
+  <div class="wrap">
+    <nav class="nav" aria-label="Secciones">
+      <a href="#" class="on">🏠 Portada</a>
+      <a href="#">🎮 Indies</a>
+      <a href="#">🎁 Gratis</a>
+      <a href="#">💸 Chollos</a>
+      <a href="#">🗺️ Guías</a>
+      <a href="#">👻 Miedito</a>
+      <a href="#">🎲 Random</a>
+    </nav>
+  </div>
+  <div class="ticker" aria-label="Juegos gratis esta semana">
+    <div class="ticker-track">
+      <span>🎁 GRATIS ESTA SEMANA: [Juego] en Epic, ¡a por él!</span>
+      <span>💸 CHOLLAZO: [Juego indie] al −80 % en Steam</span>
+      <span>💬 YA EN ESPAÑOL: [Juego] por fin se entiende</span>
+      <span>🎁 GRATIS ESTA SEMANA: [Juego] en Epic, ¡a por él!</span>
+      <span>💸 CHOLLAZO: [Juego indie] al −80 % en Steam</span>
+      <span>💬 YA EN ESPAÑOL: [Juego] por fin se entiende</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="lead">
+    <a href="#" class="card hero">
+      <span class="sticker">¡hecho en Abarán!</span>
+      <div class="thumb"><div class="vhs"></div><span class="rec">REC · CAM 02</span><span class="emoji" aria-hidden="true">📼</span></div>
+      <span class="tag t-terror">Miedito</span>
+      <h1>Backrooms — Expedición M.E.G.: el juego de miedo para jugar con tus colegas</h1>
+      <p>Hasta cuatro amigos, cámaras con efecto VHS y bichos que imitan la voz de tus compañeros. Spoiler: os vais a gritar mucho.</p>
+      <span class="meta">Por Retcheno · 5 min (o menos si tienes miedo)</span>
+    </a>
+    <div class="side">
+      <a href="#" class="card mini">
+        <div class="thumb b4 dots"><span class="emoji" aria-hidden="true">🎁</span></div>
+        <div><span class="tag t-gratis">Gratis</span><h3>Todo lo gratis de esta semana, sin trampa ni cartón</h3><span class="meta">Lo actualizamos cada jueves</span></div>
+      </a>
+      <a href="#" class="card mini">
+        <div class="thumb b3 dots"><span class="emoji" aria-hidden="true">🗺️</span></div>
+        <div><span class="tag t-guia">Guía</span><h3>Cómo poner en español un juego que no lo está</h3><span class="meta">8 min · fácil, prometido</span></div>
+      </a>
+      <a href="#" class="card mini">
+        <div class="thumb b2 dots"><span class="emoji" aria-hidden="true">👻</span></div>
+        <div><span class="tag t-indie">Indie</span><h3>Indies de miedo para jugar esta noche con la luz apagada</h3><span class="meta">6 min</span></div>
+      </a>
+    </div>
+  </section>
+
+  <div class="layout">
+    <div>
+      <div class="section-title"><h2>Lo último</h2><span class="hand">recién salido del horno 🔥</span><a href="#">Ver todo →</a></div>
+      <div class="grid">
+        <a href="#" class="card">
+          <div class="thumb b5 dots"><span class="emoji" aria-hidden="true">🚪</span></div>
+          <span class="tag t-indie">Indie</span>
+          <h3>¿Por qué los pasillos vacíos dan tanto mal rollo?</h3>
+          <p>Piscinas sin nadie, centros comerciales cerrados… Te explicamos la moda de los «liminal spaces».</p>
+          <span class="meta">Hace 2 horas</span>
+        </a>
+        <a href="#" class="card">
+          <div class="thumb b1 dots"><span class="emoji" aria-hidden="true">💸</span></div>
+          <span class="tag t-gratis">Chollos</span>
+          <h3>Juegazos en Steam por menos de lo que cuesta un bocata</h3>
+          <p>Nuestra selección de la semana. Tu cartera nos lo agradecerá (o no).</p>
+          <span class="meta">Hace 5 horas</span>
+        </a>
+        <a href="#" class="card">
+          <div class="thumb b3 dots"><span class="emoji" aria-hidden="true">🛠️</span></div>
+          <span class="tag t-guia">Guía</span>
+          <h3>Haz tu primer juego en un finde (aunque no sepas programar)</h3>
+          <p>Paso a paso y sin palabros raros. Si nosotros pudimos, tú también.</p>
+          <span class="meta">Ayer</span>
+        </a>
+        <a href="#" class="card">
+          <div class="thumb b6 dots"><span class="emoji" aria-hidden="true">💬</span></div>
+          <span class="tag t-indie">En español</span>
+          <h3>Juegos que antes no entendías y ahora sí</h3>
+          <p>Traducciones oficiales y de fans que merecen muchísimo la pena.</p>
+          <span class="meta">Ayer</span>
+        </a>
+      </div>
+
+      <div class="section-title"><h2>Random</h2><span class="hand">porque sí 🤷</span><a href="#">Más cosas raras →</a></div>
+      <div class="random">
+        <a href="#" class="card"><span class="big-emoji" aria-hidden="true">🕹️</span><span class="tag">Curiosidad</span><h3>¿Soplar los cartuchos servía de algo?</h3><span class="meta">3 min</span></a>
+        <a href="#" class="card"><span class="big-emoji" aria-hidden="true">🎮</span><span class="tag">Cacharros</span><h3>¿Un mando de 200 € te hace jugar mejor?</h3><span class="meta">4 min</span></a>
+        <a href="#" class="card"><span class="big-emoji" aria-hidden="true">👽</span><span class="tag">Internet</span><h3>Leyendas urbanas de videojuegos que te creíste</h3><span class="meta">6 min</span></a>
+      </div>
+    </div>
+
+    <aside>
+      <div class="box">
+        <h3>🎁 Gratis ahora</h3>
+        <span class="hand">corre, que se acaban</span>
+        <ul class="free">
+          <li><div>[Juego]<small>Epic · hasta el jueves</small></div><b>¡GRATIS!</b></li>
+          <li><div>[Juego]<small>Steam · finde gratis</small></div><b>¡GRATIS!</b></li>
+          <li><div>[Juego]<small>itch.io · de un indie majo</small></div><b>¡GRATIS!</b></li>
+        </ul>
+      </div>
+
+      <div class="ad"><div><span class="hand">aquí irá un anuncio</span>(300 × 250)<br>que nos ayuda a seguir 🙏</div></div>
+
+      <div class="box">
+        <h3>🔥 Lo que más se lee</h3>
+        <span class="hand">el top de la semana</span>
+        <ol class="top5">
+          <li><span>1</span>Todo lo gratis de esta semana</li>
+          <li><span>2</span>Indies de miedo para esta noche</li>
+          <li><span>3</span>Cómo poner un juego en español</li>
+          <li><span>4</span>Juegazos por menos que un bocata</li>
+          <li><span>5</span>Por qué los pasillos vacíos dan mal rollo</li>
+        </ol>
+      </div>
+
+      <div class="box promo">
+        <h3>📼 ¿Haces juegos?</h3>
+        <span class="hand">esto te va a molar</span>
+        <p>El filtro de cámara VHS de Backrooms, listo para tu juego de Unity.</p>
+        <a href="#" class="btn">Échale un ojo →</a>
+      </div>
+    </aside>
+  </div>
+
+  <section class="newsletter">
+    <div>
+      <h2>Lo gratis de la semana, <span>en tu correo</span> 📬</h2>
+      <p>Un correo los jueves. Sin spam, palabrita.</p>
+    </div>
+    <div class="form">
+      <div class="input">tu@correo.com</div>
+      <span class="btn">¡Me apunto!</span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>pulsa<span style="color: var(--pink)">start</span></b> · <span class="hand">hecho con cariño en Abarán ❤️</span></span>
+    <nav aria-label="Información">
+      <a href="#">Quiénes somos</a>
+      <a href="#">Contacto</a>
+      <a href="#">Aviso legal</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Cookies</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
