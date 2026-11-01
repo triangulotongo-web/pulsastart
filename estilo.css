@@ -364,3 +364,59 @@ kbd {
   .choice { grid-template-columns: 1fr; }
   .path { white-space: normal; overflow-wrap: anywhere; }
 }
+
+/* ------------------------------------------------------------------ adivina el juego */
+.t-adivina { background: var(--pink); color: #fff; }
+.adv { max-width: 720px; margin-inline: auto; }
+.adv-head { text-align: center; margin-bottom: 18px; }
+.adv-head h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 6px; }
+.adv-head p { color: var(--muted); }
+.adv-day { font-family: Caveat; font-size: 1.5rem; color: var(--pink); }
+.adv-card { padding: 16px; }
+.adv-screen { position: relative; border: 3px solid var(--line); border-radius: 14px; overflow: hidden; background: #1b1530; aspect-ratio: 16 / 9; }
+.adv-screen canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; }
+.adv-screen .adv-fallback { position: absolute; inset: 0; display: grid; place-items: center; font-size: 4rem; color: #fff; }
+.adv-lives { display: flex; gap: 8px; justify-content: center; margin: 14px 0 6px; }
+.adv-lives span { width: 30px; height: 12px; border-radius: 99px; border: 2.5px solid var(--line); background: var(--card); }
+.adv-lives span.miss { background: var(--pink); }
+.adv-lives span.skip { background: var(--muted); }
+.adv-lives span.win { background: var(--lime); }
+.adv-clues { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 14px 0; }
+.adv-clue { border: 2.5px dashed color-mix(in srgb, var(--ink) 30%, transparent); border-radius: 12px; padding: 10px 12px; min-height: 64px; }
+.adv-clue small { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.adv-clue b { font-size: 1.02rem; }
+.adv-clue.on { border-style: solid; border-color: var(--line); background: var(--bg-2); }
+.adv-clue.emoji b { font-size: 1.6rem; letter-spacing: .1em; }
+.adv-clue.locked b { color: var(--muted); font-weight: 600; font-size: .9rem; }
+.adv-form { display: flex; gap: 8px; flex-wrap: wrap; }
+.adv-form input {
+  flex: 1 1 220px; font: 600 1rem Inter, sans-serif; padding: 12px 14px; border-radius: 12px; border: 3px solid var(--line);
+  background: var(--card); color: var(--ink); box-shadow: var(--shadow-sm); min-width: 0;
+}
+.adv-form input:focus { outline: 3px solid var(--yellow); outline-offset: 2px; }
+.adv-form .btn { width: auto; }
+.adv-form button { font-family: inherit; cursor: pointer; }
+.adv-guesses { list-style: none; display: grid; gap: 6px; margin-top: 14px; padding: 0; }
+.adv-guesses li { display: flex; gap: 10px; align-items: center; font-weight: 600; padding: 8px 12px; border-radius: 10px; background: var(--bg-2); border: 2px solid color-mix(in srgb, var(--ink) 15%, transparent); }
+.adv-guesses li.ok { background: var(--lime); color: #142000; border-color: var(--line); }
+.adv-msg { min-height: 1.5em; font-weight: 700; color: var(--pink); margin-top: 8px; }
+.adv-end { text-align: center; padding: 22px; margin-top: 18px; }
+.adv-end h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 6px; }
+.adv-end .answer { font-family: "Bricolage Grotesque"; font-weight: 800; font-size: 1.6rem; }
+.adv-end .cta-row { justify-content: center; }
+.adv-end .cta-row .btn { width: auto; }
+.adv-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 18px 0 10px; }
+.adv-stats div { background: var(--bg-2); border: 2px solid var(--line); border-radius: 12px; padding: 8px 4px; }
+.adv-stats strong { display: block; font-family: "Bricolage Grotesque"; font-size: 1.5rem; background: none; padding: 0; }
+.adv-stats span { font-size: .72rem; font-weight: 700; color: var(--muted); }
+.adv-dist { display: grid; gap: 4px; text-align: left; max-width: 360px; margin: 0 auto 14px; font-size: .85rem; font-weight: 700; }
+.adv-dist div { display: grid; grid-template-columns: 14px 1fr; gap: 8px; align-items: center; }
+.adv-dist i { display: block; height: 18px; min-width: 22px; border-radius: 6px; background: var(--purple); color: #fff; font-style: normal; font-size: .75rem; text-align: right; padding-right: 6px; }
+.adv-dist i.today { background: var(--lime); color: #142000; }
+.adv-next { color: var(--muted); font-weight: 600; margin-top: 10px; }
+.adv-help { margin-top: 26px; }
+.adv-hidden { display: none !important; }
+@media (max-width: 520px) {
+  .adv-clues { grid-template-columns: 1fr 1fr; }
+  .adv-form .btn { flex: 1 1 auto; }
+}
