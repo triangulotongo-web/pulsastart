@@ -342,3 +342,25 @@ kbd {
   .saga-row { grid-template-columns: 1fr auto; }
   .saga-row .btn { grid-column: 1 / -1; }
 }
+
+/* ------------------------------------------------------------------ guías y traducciones */
+.toc { background: var(--card); border: 3px solid var(--line); border-radius: 18px; padding: 18px 22px; box-shadow: var(--shadow); }
+.toc b { display: block; font-family: "Bricolage Grotesque"; font-size: 1.1rem; margin-bottom: 8px; }
+.toc ol { margin: 0; padding-left: 22px; display: grid; gap: 4px; }
+.toc a { border-bottom: 2px solid color-mix(in srgb, var(--pink) 50%, transparent); }
+.path { font: 600 .88rem "Courier New", monospace; background: var(--bg-2); border: 2px solid var(--line); border-radius: 8px; padding: 1px 7px; white-space: nowrap; }
+.warn { background: color-mix(in srgb, var(--pink) 14%, var(--card)); }
+.tip { background: color-mix(in srgb, var(--lime) 22%, var(--card)); }
+.choice { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.choice .card { padding: 18px; }
+.choice h3 { font-size: 1.1rem; margin: 6px 0; }
+.choice p { margin: 0; font-size: .93rem; color: var(--muted); }
+.t-trad { background: var(--purple); color: #fff; }
+.trad .stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 12px; }
+.trad .stat { font-weight: 800; font-size: .82rem; padding: 4px 10px; border-radius: 10px; border: 2px solid var(--line); background: var(--lime); color: #142000; }
+.trad .cta-row { margin-top: 4px; }
+.trad .cta-row .btn { flex: 1 1 auto; }
+@media (max-width: 640px) {
+  .choice { grid-template-columns: 1fr; }
+  .path { white-space: normal; overflow-wrap: anywhere; }
+}
