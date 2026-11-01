@@ -219,6 +219,7 @@ footer .hand { font-size: 1.35rem; }
 .crumbs { font-size: .88rem; font-weight: 600; color: var(--muted); margin-bottom: 18px; }
 .crumbs a { border-bottom: 2px solid var(--pink); color: var(--ink); }
 .article { max-width: 760px; margin-inline: auto; }
+.article-head { margin-bottom: 28px; }
 .article-head h1 { font-size: clamp(2rem, 5.4vw, 3.3rem); margin: 14px 0 14px; }
 .article-head .lead-text { font-size: 1.18rem; color: var(--muted); margin-bottom: 16px; }
 .byline { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; font-size: .88rem; color: var(--muted); font-weight: 500; }
@@ -278,4 +279,25 @@ kbd {
   .entities { grid-template-columns: 1fr; }
   .prose { font-size: 1.02rem; }
   .callout { grid-template-columns: 1fr; }
+}
+
+/* ------------------------------------------------------------------ juegos gratis */
+.updated { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: .85rem; background: var(--lime); color: #142000; border: 2.5px solid var(--line); border-radius: 999px; padding: 4px 12px; box-shadow: var(--shadow-sm); }
+.game { display: grid; grid-template-columns: 170px 1fr; gap: 20px; align-items: start; padding: 18px; margin-top: 22px; }
+.game .thumb { aspect-ratio: 1; border-radius: 14px; }
+.game .thumb .emoji { font-size: 3.6rem; }
+.game h3 { font-size: 1.45rem; margin: 8px 0 6px; }
+.game p { color: var(--muted); font-size: .97rem; margin: 0 0 12px; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.fact { font-size: .8rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; border: 2px solid var(--line); background: var(--bg-2); }
+.fact.ends { background: var(--pink); color: #fff; }
+.fact.price s { opacity: .6; margin-right: 4px; }
+.store { display: inline-flex; width: auto; }
+.game.next { background: var(--bg-2); }
+.howto { counter-reset: s; list-style: none; padding: 0; display: grid; gap: 10px; }
+.howto li { counter-increment: s; display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; }
+.howto li::before { content: counter(s); width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; font-family: "Bricolage Grotesque"; font-weight: 800; background: var(--yellow); border: 2.5px solid var(--line); color: #1b1530; }
+@media (max-width: 640px) {
+  .game { grid-template-columns: 1fr; }
+  .game .thumb { aspect-ratio: 16 / 8; }
 }
