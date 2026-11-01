@@ -301,3 +301,23 @@ kbd {
   .game { grid-template-columns: 1fr; }
   .game .thumb { aspect-ratio: 16 / 8; }
 }
+
+/* ------------------------------------------------------------------ demos */
+.t-demo { background: var(--cyan); }
+.demo-group { margin-top: 2.2em; }
+.demo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 16px; }
+.demo { padding: 16px; display: flex; flex-direction: column; }
+.demo:nth-child(odd) { transform: rotate(-.4deg); }
+.demo:nth-child(even) { transform: rotate(.4deg); }
+.demo:hover { transform: translate(-2px, -3px) rotate(0); }
+.demo .thumb { aspect-ratio: 16 / 9; margin-bottom: 12px; }
+.demo .thumb .emoji { font-size: 3.4rem; }
+.demo h3 { font-size: 1.2rem; margin: 6px 0 6px; }
+.demo p { color: var(--muted); font-size: .93rem; margin: 0 0 12px; flex: 1; }
+.demo .facts { margin-bottom: 12px; }
+.demo .fact { font-size: .74rem; padding: 3px 8px; }
+.fact.lang-no { background: var(--yellow); color: #1b1530; }
+.demo .btn { width: 100%; }
+@media (max-width: 640px) {
+  .demo-grid { grid-template-columns: 1fr; }
+}
