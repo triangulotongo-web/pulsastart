@@ -441,3 +441,28 @@ footer nav a { display: inline-block; padding: 10px 0; }
 /* en modo oscuro, el subrayado verde de las negritas más suave para que se lea el texto blanco */
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .prose strong { background: color-mix(in srgb, var(--lime) 25%, transparent); } }
 :root[data-theme="dark"] .prose strong { background: color-mix(in srgb, var(--lime) 25%, transparent); }
+
+/* ------------------------------------------------------------------ toques humanos (6 nov 2026) */
+/* notita a mano, como un pósit pegado */
+.nota { background: var(--yellow); color: #1b1530; border: 3px solid var(--line); border-radius: 6px 18px 6px 18px; padding: 18px 20px 16px; box-shadow: var(--shadow); transform: rotate(-1.5deg); position: relative; }
+.nota::before { content: ""; position: absolute; top: -12px; left: 50%; width: 70px; height: 22px; margin-left: -35px; background: color-mix(in srgb, #fff 65%, transparent); border: 2px solid color-mix(in srgb, #1b1530 25%, transparent); transform: rotate(3deg); }
+.nota p { font-family: Caveat, cursive; font-weight: 700; font-size: 1.45rem; line-height: 1.25; margin: 0; }
+.nota .firma { display: block; text-align: right; font-family: Caveat, cursive; font-size: 1.5rem; color: #c4155a; margin-top: 6px; }
+/* ¿te ha servido? */
+.util { margin-top: 2em; padding: 18px 20px; text-align: center; }
+.util h3 { font-size: 1.25rem; margin-bottom: 12px; }
+.util-botones { display: flex; justify-content: center; gap: 12px; }
+.util-botones button { font: 700 1rem Inter, sans-serif; color: var(--ink); background: var(--card); border: 2.5px solid var(--line); border-radius: 999px; padding: 10px 20px; min-height: 44px; box-shadow: var(--shadow-sm); cursor: pointer; transition: transform .12s; }
+.util-botones button:hover { transform: translate(-1px, -2px); }
+.util-gracias { font-family: Caveat, cursive; font-size: 1.4rem; margin-top: 4px; }
+.util-gracias a { color: var(--pink); text-decoration: underline; }
+/* página de error */
+.perdido { max-width: 640px; margin: 40px auto 60px; text-align: center; }
+.perdido .num { font-family: "Bricolage Grotesque"; font-weight: 800; font-size: clamp(5rem, 22vw, 9rem); line-height: 1; color: var(--pink); text-shadow: 5px 5px 0 var(--line); transform: rotate(-3deg); display: inline-block; }
+.perdido p { font-size: 1.15rem; color: var(--muted); margin: 14px 0 24px; }
+.perdido .cta-row { justify-content: center; }
+@media (prefers-reduced-motion: no-preference) {
+  .perdido .fantasma { display: inline-block; animation: flota 3s ease-in-out infinite; }
+  @keyframes flota { 50% { transform: translateY(-10px) rotate(4deg); } }
+}
+.util-botones[hidden] { display: none; }
