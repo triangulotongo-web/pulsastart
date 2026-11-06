@@ -420,3 +420,24 @@ kbd {
   .adv-clues { grid-template-columns: 1fr 1fr; }
   .adv-form .btn { flex: 1 1 auto; }
 }
+
+/* ------------------------------------------------------------------ mejoras de interfaz (6 nov 2026) */
+/* la barra verde ya no hace que la portada se mueva de lado en el móvil */
+header { overflow-x: clip; }
+/* se ve dónde está el foco al navegar con teclado */
+:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 6px; }
+/* texto oscuro sobre rosa y morado: se lee mucho mejor */
+.t-indie, .t-terror, .t-trad, .t-adivina, .fact.ends, .deal .off { color: #1b1530; }
+.promo, .promo .hand, .promo p { color: #1b1530; }
+.verdict, .verdict h2, .verdict p { color: #1b1530; }
+/* enlaces del pie más fáciles de pulsar con el dedo */
+footer nav a { display: inline-block; padding: 10px 0; }
+/* el menú avisa de que hay más secciones a la derecha */
+@media (max-width: 980px) {
+  .nav { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); padding-right: 40px; }
+}
+/* en las cajas verdes de consejo el texto va en el color principal, no en gris */
+.tip p { color: var(--ink); }
+/* en modo oscuro, el subrayado verde de las negritas más suave para que se lea el texto blanco */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .prose strong { background: color-mix(in srgb, var(--lime) 25%, transparent); } }
+:root[data-theme="dark"] .prose strong { background: color-mix(in srgb, var(--lime) 25%, transparent); }
