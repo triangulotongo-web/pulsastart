@@ -120,3 +120,4 @@ main { padding-block: 34px 60px; }
   .site-nav { gap: 0 18px; }
   .grid { grid-template-columns: 1fr; }
 }
+.kicker a { color: inherit; }
