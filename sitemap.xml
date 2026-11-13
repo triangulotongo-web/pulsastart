@@ -10,6 +10,7 @@
   <url><loc>https://pulsastart.es/pais/alemania/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/argentina/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/austria/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pulsastart.es/pais/brasil/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/checoslovaquia/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/china/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/corea-del-sur/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
@@ -108,9 +109,12 @@
   <url><loc>https://pulsastart.es/tanques/e-100/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/t28/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/tortoise/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/is-4/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/is-7/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/t-54-t-55/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/amx-50/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/m46-patton/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/asu-57/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/m47-patton/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/pt-76/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/amx-13/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
@@ -120,7 +124,10 @@
   <url><loc>https://pulsastart.es/tanques/conqueror/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/fv4005/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/super-sherman/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/m50-ontos/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/m103/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/strv-74/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/asu-85/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/m60/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/object-279/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/shot/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
@@ -128,6 +135,7 @@
   <url><loc>https://pulsastart.es/tanques/t-62/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/type-61/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/type-62/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/kanonenjagdpanzer/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/leopard-1/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/magach/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/panzer-61/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
@@ -143,6 +151,7 @@
   <url><loc>https://pulsastart.es/tanques/type-69/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/fv101-scorpion/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/t-72/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/ikv-91/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/type-74/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/olifant/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/t-80/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
@@ -152,8 +161,11 @@
   <url><loc>https://pulsastart.es/tanques/challenger-1/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/tam/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/m-84/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/osorio/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/tr-85/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/k1/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/stingray/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pulsastart.es/tanques/type-90/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/quienes-somos/</loc><lastmod>2026-11-12</lastmod><priority>0.4</priority></url>
   <url><loc>https://pulsastart.es/aviso-legal/</loc><lastmod>2026-11-12</lastmod><priority>0.2</priority></url>
   <url><loc>https://pulsastart.es/privacidad/</loc><lastmod>2026-11-12</lastmod><priority>0.2</priority></url>
