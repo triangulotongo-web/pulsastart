@@ -121,3 +121,32 @@ main { padding-block: 34px 60px; }
   .grid { grid-template-columns: 1fr; }
 }
 .kicker a { color: inherit; }
+
+/* artículos */
+.plain.wide { max-width: 900px; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.4em 0; }
+.duo figure { background: var(--panel); border: 1px solid var(--rule); }
+.duo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-bottom: 1px solid var(--rule); }
+.duo figcaption { font-size: .85rem; color: var(--muted); padding: 8px 12px; }
+.tabla-scroll { overflow-x: auto; border: 1px solid var(--rule); background: var(--panel); margin-bottom: 1em; }
+.versus th[scope="col"] { font-family: "IBM Plex Mono", monospace; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-ink); background: var(--accent); }
+.versus th[scope="row"] { width: 26%; }
+.versus td { width: 37%; }
+.ranking { list-style: none; margin: 1.4em 0 0; padding: 0; display: grid; gap: 14px; }
+.ranking li { display: grid; grid-template-columns: 200px 1fr; gap: 18px; align-items: start; background: var(--panel); border: 1px solid var(--rule); padding: 12px; }
+.ranking img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.ranking h2 { font-size: 1.3rem; margin: 4px 0 4px; padding: 0; border: 0; }
+.ranking .dato { font-family: "IBM Plex Mono", monospace; font-size: .95rem; color: var(--accent); margin-bottom: .3em; }
+.ranking p { margin-bottom: 0; }
+.glosario dt { font-family: "Source Serif 4", Georgia, serif; font-weight: 700; font-size: 1.15rem; margin-top: 1.1em; }
+.glosario dd { margin: .3em 0 0; padding-bottom: .9em; border-bottom: 1px solid var(--rule); }
+.crono { list-style: none; margin: 1.4em 0 0; padding: 0; border-left: 3px solid var(--accent); }
+.crono li { display: grid; grid-template-columns: 70px 1fr; gap: 12px; padding: 8px 0 8px 14px; border-bottom: 1px solid var(--rule); }
+.crono .anio { font-family: "IBM Plex Mono", monospace; font-weight: 500; color: var(--accent); }
+.crono p { margin: 0; line-height: 1.7; }
+.crono small { color: var(--muted); }
+.section-head > a { font-size: .9rem; }
+@media (max-width: 560px) {
+  .duo { grid-template-columns: 1fr; }
+  .ranking li { grid-template-columns: 1fr; }
+}
