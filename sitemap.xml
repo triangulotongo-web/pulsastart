@@ -8,31 +8,15 @@
   <url><loc>https://pulsastart.es/pais/</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://pulsastart.es/prototipos/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/alemania/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/argentina/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/australia/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/austria/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/brasil/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/canada/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/checoslovaquia/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/china/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/corea-del-sur/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/espana/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/estados-unidos/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/francia/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/hungria/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/israel/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/italia/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/japon/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/nueva-zelanda/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/polonia/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/reino-unido/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/rumania/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/rusia/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/sudafrica/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/suecia/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/suiza/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/pais/union-sovietica/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pulsastart.es/pais/yugoslavia/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/tanques/tsar-tank/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/mark-i/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/mark-iv/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
@@ -221,6 +205,9 @@
   <url><loc>https://pulsastart.es/tanques/type-90/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/tanques/m8-ags/</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
   <url><loc>https://pulsastart.es/articulos/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pulsastart.es/articulos/historia-del-carro-de-combate/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pulsastart.es/articulos/tanques-guerra-civil-espanola/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pulsastart.es/articulos/evolucion-del-blindaje/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/articulos/t-34-contra-panzer-iv/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/articulos/tiger-i-contra-is-2/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://pulsastart.es/articulos/panther-contra-sherman/</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
